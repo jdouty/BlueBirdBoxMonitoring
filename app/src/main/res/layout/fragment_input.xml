@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="left"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header: Day, Date -->
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_date_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Date:"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_box_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Box:"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_species_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Species:"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_nest_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Nest:"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_eggs_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Eggs:"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_young_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Young:"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_fledged_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Fledged:"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/input_comments_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Comments:"/>
+
+</LinearLayout>
