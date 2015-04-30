@@ -17,15 +17,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".InputActivity"
-            android:label="@string/title_activity_input"
-            android:parentActivityName=".GooglePlayServicesActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.gmail.kludgeworks.bluebirdboxmonitoring.GooglePlayServicesActivity" />
-        </activity>
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

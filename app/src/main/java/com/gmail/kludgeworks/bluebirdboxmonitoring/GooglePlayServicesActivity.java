@@ -1,20 +1,19 @@
 package com.gmail.kludgeworks.bluebirdboxmonitoring;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
-
 import com.google.android.gms.drive.Drive;
 
-public class GooglePlayServicesActivity extends Activity implements
+public class GooglePlayServicesActivity extends ActionBarActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
 
@@ -47,9 +46,6 @@ public class GooglePlayServicesActivity extends Activity implements
         if (savedInstanceState != null) {
             mIsInResolution = savedInstanceState.getBoolean(KEY_IN_RESOLUTION, false);
         }
-
-        Intent intent = new Intent(this, InputActivity.class);
-        startActivity(intent);
     }
 
     /**
@@ -121,7 +117,13 @@ public class GooglePlayServicesActivity extends Activity implements
     @Override
     public void onConnected(Bundle connectionHint) {
         Log.i(TAG, "GoogleApiClient connected");
-        // TODO: Start making API requests.
+
+        setContentView(R.layout.input_detail);
+        InputFragment fragment = new InputFragment();
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.input_detail_container, fragment)
+                .commit();
     }
 
     /**
